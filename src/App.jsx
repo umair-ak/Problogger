@@ -1,13 +1,15 @@
 import './App.css'
 import Base from './components/Base'
 import Login from './pages/Login'
+import SignUp from './pages/Signup'
 
 function App() {
   
 
+  // <Login></Login>
   return (
     <Base>
-    <Login></Login>
+    <SignUp />
     </Base>
   )
 }
