@@ -2,19 +2,27 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import '@fontsource/inter';
 import './index.css'
-import { Route, RouterProvider, createBrowserRouter, createRoutesFromElements } from 'react-router-dom';
+import { Route, RouterProvider, createBrowserRouter, Routes,createRoutesFromElements } from 'react-router-dom';
 import Base from './components/Base.jsx';
 import Home from './pages/Home.jsx';
 import Login from './pages/Login.jsx';
 import Signup from './pages/Signup.jsx'
+import User from './components/User.jsx';
+import Dashboard from './pages/Dashboard.jsx';
 
 const router = createBrowserRouter(
   createRoutesFromElements(
+    
     <Route path='/' element={<Base />}>
-    <Route path='' element={<Home />} />
-    <Route path='login' element={<Login />} />
-    <Route path='signup' element={<Signup />} />
+      <Route index element={<Home />} />
+      <Route path='login' element={<Login />} />
+      <Route path='signup' element={<Signup />} />
+      
+        <Route path='user' element={<User />}>
+        <Route path='dashboard' element={<Dashboard />} />
+        </Route>
     </Route>
+        
   )
 )
 
