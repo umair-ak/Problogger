@@ -1,12 +1,14 @@
 import React from 'react'
-import { Divider } from '@mui/material'
+import GroupsIcon from '@mui/icons-material/Groups';
+import LightbulbIcon from '@mui/icons-material/Lightbulb';
+import RocketLaunchIcon from '@mui/icons-material/RocketLaunch';
 
 export default function Home() {
   return (
     <div>
 
-    <section className='min-h-screen container m-auto mb-auto'>
-    <div className='flex flex-wrap justify-evenly mt-20 mb-20'>
+    <section className='container m-auto pt-40 mb-28'>
+    <div className='flex flex-wrap justify-evenly'>
     <div className='mt-5 pt-10 mb-20 content-center'>
     
     <h2 className='text-8xl pb-5'>ProBlogger</h2>
@@ -24,12 +26,31 @@ export default function Home() {
     </div>
     </section>
 
-    <div className='bg-slate-300'>
+    <div className='bg-slate-300 pb-20'>
     <section className='container m-auto text-center'>
+    <h2 className='text-7xl p-10 pt-20 '>Features</h2>
+    <div className='flex flex-wrap justify-evenly'>
+
+          <div className='flex flex-col items-center text-3xl'>
+          <GroupsIcon sx={{fontSize:"7rem"}}/>
+          Connect with Others
+        </div>
+
+    <div className='flex flex-col items-center text-3xl'>
+    <LightbulbIcon sx={{fontSize:"7rem"}}/>
+    Get Inspired
+    </div>
+
+    <div className='flex flex-col items-center text-3xl'>
+    <RocketLaunchIcon sx={{fontSize:"7rem"}}/>
+    Increase your Reach
+    </div>
     
+    </div>
 
     </section>
     </div>
+    
     
     </div>
   )
