@@ -4,7 +4,7 @@ import { Navigate, Outlet } from 'react-router-dom'
 export default function User() {
   
     // Create a login funciton that would check if the user is registered and logged in
-    let loggedin = false;
+    let loggedin = true;
 
     if(loggedin){ 
         return <Outlet />;

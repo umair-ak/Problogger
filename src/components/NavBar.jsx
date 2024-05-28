@@ -1,10 +1,9 @@
 import React from 'react'
-import "./navstyle.css"
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { blueGrey } from '@mui/material/colors';
 import { Link } from 'react-router-dom';
 import CssBaseline from '@mui/material/CssBaseline';
-
+import { AppBar,Toolbar,Typography } from '@mui/material';
 
 const defaultTheme = createTheme({
   palette: {
@@ -18,16 +17,18 @@ const defaultTheme = createTheme({
 
 export default function NavBar() {
   return (
+    
     <ThemeProvider theme={defaultTheme}>
-    <CssBaseline />
-    <ul className='w-screen'>
-    <li><Link to='/' className="active" href="#home">Home</Link></li>
-    <li><Link to='login' >New Post</Link></li>
-    <li><Link to="#">Contact</Link></li>
-    <li><Link to="#">About</Link></li>
-    </ul>
-   
-    </ThemeProvider>
+      
+    <AppBar sx={{ zIndex: (theme) => theme.zIndex.drawer + 1 }}>
+        <Toolbar>
+          <Typography variant="h6" noWrap component="div">
+            ProBlogger
+          </Typography>
+        </Toolbar>
+      </AppBar>
+      
+       </ThemeProvider>
     
   )
 }
