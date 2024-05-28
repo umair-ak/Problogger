@@ -10,9 +10,9 @@ export default function Home() {
 
     <section className='container m-auto pt-40 mb-28'>
     <div className='flex flex-wrap justify-evenly'>
-    <div className='mt-5 pt-10 mb-20 content-center'>
+    <div className='mt-5 pt-10 mb-20 content-center flex flex-col'>
     
-    <h2 className='sm:text-6xl md:text-7xl text-8xl pb-5'>ProBlogger</h2>
+    <h2 className='text-8xl pb-5'>ProBlogger</h2>
     <p className='text-3xl'>Connect through words.</p>
     
     {/*Buttons */}
@@ -53,8 +53,19 @@ export default function Home() {
     </section>
     </div>
     
-    <section className='container m-auto pt-20 mb-20'>
-    
+    <section className='container m-auto pt-20 mb-20 min-h-full'>
+    <h2 className='text-7xl pb-5 m-5'>About ProBlogger</h2>
+    <p className='text-2xl m-3'>
+    Welcome to ProBloggers, where words come alive and ideas find their digital home.
+    Dive into thought-provoking articles, practical tips, and captivating stories. Whether you’re a seasoned blogger or a curious reader, we’ve got something for you.
+    Our team of passionate writers covers diverse topics—travel, lifestyle, tech, wellness, and more. Expect well-researched insights and fresh perspectives.
+    We believe in the power of collaboration. Let’s create together! If you’re a guest writer, photographer, or artist, reach out—we’d love to feature your work.
+    Explore our articles, drop comments, and follow us on Social Media Links. Let’s embark on this blogging adventure together!
+<br/>
+Happy reading! 
+    </p>
+
+    <Link to='/login'><button type='button' className='m-3 text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-600 dark:text-white dark:border-gray-600 dark:hover:bg-white dark:hover:border-gray-600 dark:hover:text-gray-950 dark:focus:ring-gray-700'>Get Started</button></Link>
     </section>
     
     </div>

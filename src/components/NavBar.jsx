@@ -20,7 +20,7 @@ export default function NavBar() {
   return (
     <ThemeProvider theme={defaultTheme}>
     <CssBaseline />
-    <ul>
+    <ul className='w-screen'>
     <li><Link to='/' className="active" href="#home">Home</Link></li>
     <li><Link to='login' >New Post</Link></li>
     <li><Link to="#">Contact</Link></li>
