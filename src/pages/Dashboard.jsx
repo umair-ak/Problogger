@@ -1,5 +1,6 @@
 import React from 'react'
-import {ListItem,Divider,List,Toolbar,CssBaseline,Drawer,Box,ListItemButton,ListItemIcon,ListItemText} from '@mui/material'
+import {ListItem,Divider,List,Toolbar,CssBaseline,Drawer,Box,ListItemButton,ListItemIcon,ListItemText,Grid} from '@mui/material'
+
 
 import InboxIcon from '@mui/icons-material/MoveToInbox';
 import MailIcon from '@mui/icons-material/Mail';
@@ -47,15 +48,27 @@ export default function Dashboard() {
         </List>
       </Box>
     </Drawer>
-    <Box component="main" >
+    <Box component="main" sx={{width:"80%"}}>
     <Toolbar />
+    <Grid container spacing={{ xs: 2}} >
     
-    <BlogPostCard />
-    <BlogPostCard />
-    <BlogPostCard />
-    <BlogPostCard />
-    <BlogPostCard />
+    <Grid item xs={4} ><BlogPostCard /></Grid>
+    <Grid item xs={4} ><BlogPostCard /></Grid>
+    <Grid item xs={4} ><BlogPostCard /></Grid>
+    <Grid item xs={4} ><BlogPostCard /></Grid>
+    <Grid item xs={4} ><BlogPostCard /></Grid>
+    <Grid item xs={4} ><BlogPostCard /></Grid>
+    
+    </Grid>
+    
     </Box>
+    
+    <Box component='aside'>
+    <Toolbar />
+    <h1>Display some content here</h1>
+    
+    </Box>
+
     </Box>
     
     );
