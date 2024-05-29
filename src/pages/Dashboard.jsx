@@ -3,6 +3,7 @@ import {ListItem,Divider,List,Toolbar,CssBaseline,Drawer,Box,ListItemButton,List
 
 import InboxIcon from '@mui/icons-material/MoveToInbox';
 import MailIcon from '@mui/icons-material/Mail';
+import BlogPostCard from '../components/BlogPostCard';
 
 export default function Dashboard() {
   const drawerWidth = 240;
@@ -46,6 +47,16 @@ export default function Dashboard() {
         </List>
       </Box>
     </Drawer>
+    <Box component="main" >
+    <Toolbar />
+    
+    <BlogPostCard />
+    <BlogPostCard />
+    <BlogPostCard />
+    <BlogPostCard />
+    <BlogPostCard />
     </Box>
+    </Box>
+    
     );
-}
+  }
