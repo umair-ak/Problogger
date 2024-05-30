@@ -9,6 +9,7 @@ import Login from './pages/Login.jsx';
 import Signup from './pages/Signup.jsx'
 import User from './components/User.jsx';
 import Dashboard from './pages/Dashboard.jsx';
+import Interests from './pages/Interests.jsx';
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -19,6 +20,7 @@ const router = createBrowserRouter(
       <Route path='signup' element={<Signup />} />
       
         <Route path='user' element={<User />}>
+        <Route path='interests' element={<Interests />} />
         <Route path='dashboard' element={<Dashboard />} />
         </Route>
     </Route>
