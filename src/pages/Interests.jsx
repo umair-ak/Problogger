@@ -1,4 +1,4 @@
-import { Toolbar,Card,CardContent,Typography, Grid,Box, CardActionArea } from '@mui/material'
+import { Toolbar,Card,CardContent,Typography, Grid,Box, CardActionArea, Button } from '@mui/material'
 import React from 'react'
 import { useState } from 'react';
 
@@ -56,6 +56,8 @@ export default function Interests() {
     )})}
     
     </Grid>
+
+    <Button variant="contained" sx={{backgroundColor:'#607d8b',mt:'2rem'}} disabled={selected.length < 5}>Continue</Button>
     </Box>
     </div>
   )
