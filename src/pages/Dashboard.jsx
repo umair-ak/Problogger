@@ -10,7 +10,7 @@ import PostAddIcon from '@mui/icons-material/PostAdd';
 import Person2Icon from '@mui/icons-material/Person2';
 import BarChartIcon from '@mui/icons-material/BarChart';
 import CreateIcon from '@mui/icons-material/Create';
-import BlogPostCard from '../components/BlogPostCard';
+import { Outlet } from 'react-router-dom';
 
 export default function Dashboard() {
 
@@ -59,20 +59,7 @@ export default function Dashboard() {
         </List>
       </Box>
     </Drawer>
-    <Box component="main" sx={{width:"80%"}}>
-    <Toolbar />
-    <Grid container spacing={{ xs: 2}} >
-    
-    <Grid item xs={4} ><BlogPostCard /></Grid>
-    <Grid item xs={4} ><BlogPostCard /></Grid>
-    <Grid item xs={4} ><BlogPostCard /></Grid>
-    <Grid item xs={4} ><BlogPostCard /></Grid>
-    <Grid item xs={4} ><BlogPostCard /></Grid>
-    <Grid item xs={4} ><BlogPostCard /></Grid>
-    
-    </Grid>
-    
-    </Box>
+    <Outlet/>
     
     <Box component='aside'>
     <Toolbar />
