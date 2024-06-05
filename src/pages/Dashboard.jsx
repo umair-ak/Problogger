@@ -63,12 +63,6 @@ export default function Dashboard() {
     </Drawer>
     <Outlet/>
     
-    <Box component='aside'>
-    <Toolbar />
-    <h1>Display some content here</h1>
-    
-    </Box>
-
     </Box>
     
     );
