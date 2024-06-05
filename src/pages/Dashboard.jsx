@@ -10,7 +10,7 @@ import PostAddIcon from '@mui/icons-material/PostAdd';
 import Person2Icon from '@mui/icons-material/Person2';
 import BarChartIcon from '@mui/icons-material/BarChart';
 import CreateIcon from '@mui/icons-material/Create';
-import { Outlet } from 'react-router-dom';
+import { Outlet,Link } from 'react-router-dom';
 
 export default function Dashboard() {
 
@@ -31,20 +31,22 @@ export default function Dashboard() {
       <Toolbar />
       <Box sx={{ overflow: 'auto' }}>
         <List>
-          {[{text:'Dashboard',icon:<DashboardIcon />},
-           {text:'My posts',icon:<PostAddIcon />},
-           {text:'Profile',icon:<Person2Icon />},
-           {text:'Messages',icon:<MailIcon />}, 
-           {text:'Stats',icon:<BarChartIcon />},
-           {text:'Create post',icon:<CreateIcon />}].map((i) => (
-            <ListItem key={i.text} disablePadding>
+          {[{text:'Dashboard',icon:<DashboardIcon />,link:''},
+           {text:'My posts',icon:<PostAddIcon />,link:'myposts'},
+           {text:'Profile',icon:<Person2Icon />,link:'profile'},
+           {text:'Messages',icon:<MailIcon />,link:'messages'}, 
+           {text:'Stats',icon:<BarChartIcon />,link:'stats'},
+           {text:'Create post',icon:<CreateIcon />,link:'createpost'}].map((i) => (
+             <Link to={i.link} key={i.text}>
+            <ListItem  disablePadding>
               <ListItemButton>
-                <ListItemIcon>
-                {i.icon}
-                </ListItemIcon>
-                <ListItemText primary={i.text} />
+              <ListItemIcon>
+              {i.icon}
+              </ListItemIcon>
+              <ListItemText primary={i.text} />
               </ListItemButton>
-            </ListItem>
+              </ListItem>
+              </Link>
           ))}
         </List>
         <Divider />

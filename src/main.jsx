@@ -31,7 +31,7 @@ const router = createBrowserRouter(
             <Route index element={<BlogPosts />} />
             <Route path='myposts' element={<MyPosts />} />
             <Route path='profile' element={<Profile />} />
-            <Route path='message' element={<Messages />} />
+            <Route path='messages' element={<Messages />} />
             <Route path='stats' element={<Stats />} />
             <Route path='createpost' element={<CreatePost />} />
           </Route>
