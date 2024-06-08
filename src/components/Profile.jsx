@@ -3,9 +3,9 @@ import { Box, Toolbar } from '@mui/material'
 
 export default function Profile() {
   return (
-    <Box component="main" sx={{width:"80%"}}>
+    <Box component="main" >
     <Toolbar />
-        User profile
+        
     </Box>
   )
 }
